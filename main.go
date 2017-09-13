@@ -7,18 +7,19 @@ import (
 
 	fptai "github.com/fpt-corp/fptai-sdk-go"
 	"github.com/michlabs/fbbot"
+	"github.com/phongle318/chcb/dialog"
 )
 
 const (
 	FPTAI_TOKEN = "DCYgINEOZCbxtsgAEO4vFnpArEsZqLse"
 
-	FB_PAGE_ACCESS_TOKEN = "EAALFPaj8iGIBAEHul76ktvUunolgiSuP9pYEZCHqmo8vQOFZChgvmSTrURIpRU6hzoeIeRUM1b6kknfZAit36OYQF8dlOSFDUcPqZAR9eaqnZCYdq0BLuVMowPlo9ppwb9UDd21GyLN8UbzdGh6uqho8bOk3e0mctyVEEAZC1uuwZDZD"
+	FB_PAGE_ACCESS_TOKEN = "EAALFPaj8iGIBAL251rYA094pzZBXYtYSzh2dCZAhGUqh6BkMAslxClPOFJZBpeV4E472mZCAJzg88jGdoZC2OulZCoVCUcciBqFmHPYE4uYfTtiNZAhOfW8Aw1rrnro1iuaMws1TyIFzodNvy9NO7QzVZCk055yH8p9C55LjtXaC8QZDZD"
 	FB_VERIFY_TOKEN      = "PhongLH318"
 )
 
 var client *fptai.Client
 var PORT int = 1203
-var ErrMsg string = "Sory, But I don't understand what are you saying."
+var ErrMsg string = "Sorry, But I don't understand what are you saying."
 
 type BjjNerd struct {
 	Answers []Answer
@@ -65,12 +66,24 @@ func init() {
 }
 
 func main() {
+	coffeHouse := dialog.NewDialog()
+	commander := dialog.NewCommander()
+	tracker := new(dialog.ActivityTracker)
+
 	var bjjNerd BjjNerd
 	if err := bjjNerd.Load("answers.json"); err != nil {
 		log.Fatal(err)
 	}
 
 	bot := fbbot.New(PORT, FB_VERIFY_TOKEN, FB_PAGE_ACCESS_TOKEN)
-	bot.AddMessageHandler(&bjjNerd)
+	bot.AddMessageHandler(tracker)
+	bot.AddEchoHandler(tracker)
+	bot.AddPostbackHandler(tracker)
+	bot.AddReadHandler(tracker)
+
+	bot.AddMessageHandler(coffeHouse)
+	bot.AddPostbackHandler(coffeHouse)
+	bot.AddEchoHandler(commander)
+
 	bot.Run()
 }

@@ -1,0 +1,53 @@
+vi:
+  prompt_actions:
+    - "Chào @gender @full_name, em là Diễm My, em có thể hỗ trợ thông tin gì được cho @gender ạ? @Gender vui lòng chọn các phương án phía dưới nhé"
+  ask_for_product:
+    - "Mời @gender nhập tên sản phẩm (ví dụ: Galaxy S8, laptop Asus) để em có thể hỗ trợ @gender:"
+  ask_for_product_again:
+    - "Em xin lỗi, @gender có thể gõ lại tên sản phẩm được không ạ"
+  product_not_found:
+    - "Em xin lỗi, hiện tại FPT Shop không tìm thấy sản phẩm @gender yêu cầu. Mời @gender chọn một trong các dịch vụ dưới, hoặc chat trực tiếp với nhân viên để được trợ giúp ạ"
+  product_no_promotion:
+    - "Dạ sản phẩm %s hiện tại chưa có khuyến mại nào ạ"
+  product_promotion:
+    - "Dạ khuyến mãi cho sản phẩm %s như sau:"
+  product_variants:
+    - "Mời @gender chọn màu của sản phẩm nhé:"
+  ask_for_phone:
+    - "Dạ @gender vui lòng cho em xin số điện thoại để FPT Shop liên hệ lại hỗ trợ @gender ạ?"
+  ask_for_name:
+    - "Dạ @gender vui lòng cho em xin tên của @gender nhé?"
+  show_product:
+    - "Dưới đây là một số sản phẩm @gender có thể quan tâm ạ, nếu chưa đúng sản phẩm @gender đang tìm thì @gender có thể nhập lại tên sản phẩm ạ"
+  notification_subscribed:
+    - "Dạ em đã ghi nhận thông tin và FPT Shop sẽ thông báo với @gender ngay khi hàng về ạ, em xin cảm ơn!"
+  instock_notification:
+    - "Hiện tại sản phẩm @gender quan tâm đã có hàng rồi ạ:"
+  payment_method:
+    - "Em mời @gender chọn phương thức thanh toán ạ:"
+  shipping_method:
+    - "@gender muốn nhận hàng tại FPT Shop hay nhận hàng tại nhà (miễn phí) ạ:"
+  pickup_store:
+    - "Mời @gender nhập địa chỉ gần nhất để em hỗ trợ nhé (ví dụ: 216 Thái Hà, Đống Đa, Hà Nội):"
+  store_not_found:
+    - "Dạ hiện tại không có shop nào còn hàng gần địa chỉ @gender đã nhập, mời @gender nhập địa chỉ khác hoặc ấn vào nút \"Đặt trước\" để bên em liên hệ lại với @gender khi có hàng ạ. Nếu @gender muốn hỏi thêm gì thì vui lòng liên hệ với nhân viên để được trợ giúp ạ."
+  please_select_store:
+    - "Dạ em mời @gender chọn shop đến lấy hàng ạ:"
+  order_confirm:
+    - "Dạ @Gender vui lòng kiểm tra lại thông tin một lần nữa trước khi gửi yêu cầu cho FPT Shop ạ"
+  order_update:
+    - "Dạ @Gender cần thay đổi thông tin nào ạ?"
+  order_wait_for_api:
+    - "Dạ đơn hàng của @gender đang được gửi đi, xin @gender vui lòng đợi trong giây lát"
+  order_complete:
+    - "FPT Shop đã nhận được yêu cầu của @Gender, sẽ có nhân viên liên hệ lại với @Gender trong thời gian sớm nhất. Xin cảm ơn!"
+  promotion:
+    - "Dạ hiện tại bên em đang có các chương trình khuyến mãi mà @gender có thể quan tâm:"
+  promotion_not_found:
+    - "Em xin lỗi, hiện tại chưa có chương trình khuyến mãi nào rồi ạ. Mời @gender chọn một trong các dịch vụ dưới, hoặc chat trực tiếp với nhân viên để được trợ giúp nhé"
+  promotion_mass_send:
+    - "Dạ em xin mời @gender @full_name tham khảo một số chương trình khuyến mãi mới nhất của bên em nhé:"
+  staff_support:
+    - "Dạ @Gender vui lòng đợi trong giây lát, nhân viên bên em sẽ hỗ trợ @gender ạ."
+  error:
+    - "Xin lỗi @gender, em rất tiếc nhưng hệ thống bên em đang gặp một chút trục trặc."

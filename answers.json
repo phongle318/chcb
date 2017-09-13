@@ -1,0 +1,10 @@
+[
+	{
+		"intent": "greeting",
+		"answer": "Xin chào anh/chị"
+	},
+	{
+		"intent": "cafe_order",
+		"answer": "anh chị muốn 1 cốc cà phê ạ"
+	}
+]
